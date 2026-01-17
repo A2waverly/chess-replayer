@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess Game Analyzer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Chessboard.js -->
+  <link rel="stylesheet" href="chessboard.css">
+  <script src="chessboard.js"></script>
+
+  <!-- Chess.js -->
+  <script src="chess.js"></script>
+</head>
+<body>
+
+<div id="notification"></div>
+
+<!-- PGN -->
+<div id="pgnSection">
+  <textarea id="pgnInput" rows="4" placeholder="Paste your PGN here..."></textarea>
+  <div id="pgnButtons">
+  <button id="loadPGN">Load Game</button>
+  <button id="resetBoard">Reset</button>
+  </div>
+</div>
+
+<div id="mainLayout">
+
+  <!-- BEST MOVES -->
+  <div class="sidePanel">
+    <h4>Best Moves</h4>
+    <div class="panelContent">
+      <ol id="bestMovesList"></ol>
+    </div>
+  </div>
+
+  <!-- BOARD -->
+  <div id="boardArea">
+
+    <div id="currentPlayerContainer">
+      Side to move: <span id="currentPlayer">White</span>
+    </div>
+
+    <div id="boardWrapper">
+      <div id="board"></div>
+
+      <div id="evalBarContainer">
+        <div id="evalBar"></div>
+      </div>
+    </div>
+
+    <div id="boardControls">
+      <button id="prevMove">Previous</button>
+      <button id="nextMove">Next</button>
+      <button id="flipBoard">Flip board</button>
+    </div>
+
+  </div>
+
+  <!-- MOVES PLAYED -->
+  <div class="sidePanel">
+    <h4>Moves Played</h4>
+
+    <!-- 🔑 CET ID MANQUAIT -->
+    <div id="moveListContainer" class="panelContent">
+      <div id="currentMove"></div>
+      <ol id="moveList"></ol>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
